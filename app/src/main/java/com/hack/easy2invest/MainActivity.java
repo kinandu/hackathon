@@ -95,6 +95,9 @@ public class MainActivity extends AppCompatActivity {
                 mCameraView.setVisibility(View.GONE);
 
                 Intent myIntent = new Intent(MainActivity.this, DetailsActivity.class);
+                if (edtSearch.getText()!=null) {
+                    myIntent.putExtra("name", edtSearch.getText().toString());
+                }
                 MainActivity.this.startActivity(myIntent);            }
         });
     }
